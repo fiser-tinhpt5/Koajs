@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Login</title>
+		<meta charset="utf-8">
+	</head>
+
+	<body>
+		<form>
+			<table>
+				<tr>
+					<th colspan="2">Login</th>
+				</tr>
+				<tr>
+					<th>User name: </th>
+					<th><input id="user" type="text" name="username"></th>
+				</tr>
+				<tr>
+					<th>Password: </th>
+					<th><input id="pass" type="password" name="password"></th>
+				</tr>
+				<tr>
+					<th>
+						<input type="button" value="Login" id="login" onclick="checkUser()">
+					</th>
+					<th>
+						<input type="reset" value="Cancel" id="cancel">
+					</th>
+				</tr>
+			</table>
+		</form>
+		<script type="text/javascript">
+			function checkUser() {
+				var user = document.getElementById("user").value;
+				var pass = document.getElementById("pass").value;
+				if (user == "admin"){
+					if (pass == "123456") {
+						document.writeln("Hello, login success");
+						document.close();
+					} else {
+						alert("Password is wrong");
+					};
+				} else {
+					alert("User is wrong");
+				}
+			}
+		</script>
+	</body>
+</html>
